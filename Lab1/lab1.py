@@ -17,7 +17,10 @@ def fibonacci_func(number):
 def main():
     """ Main function """
     logging.info("Enter Fibonacci number:")
-    logging.info(str(fibonacci_func(number=int(input()))))
+    try:
+        logging.info(str(fibonacci_func(number=int(input()))))
+    except ValueError:
+        logging.info("Error. Expected number input")
 
 
 if __name__ == "__main__":
