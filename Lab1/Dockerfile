@@ -1,9 +1,10 @@
 FROM python:3.8
 
-RUN mkdir -p /ust/src/app/
-WORKDIR /usr/src/app/
+ENV MY_PATH="/ust/src/app/"
+RUN mkdir -p $MY_PATH
+WORKDIR $MY_PATH
 
-COPY . /usr/src/app
+COPY lab1.py requirements.txt $MY_PATH
 RUN set -ex \
     pip3 install --no-cache-dir -r requirements.txt \
     && rm  requirements.txt
