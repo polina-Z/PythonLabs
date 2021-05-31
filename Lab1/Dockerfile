@@ -1,6 +1,6 @@
 FROM python:3.8
 
-ENV MY_PATH="/ust/src/app/"
+ENV MY_PATH="/usr/src/app/"
 RUN mkdir -p $MY_PATH
 WORKDIR $MY_PATH
 
